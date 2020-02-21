@@ -1,7 +1,13 @@
 <template>
   <v-container>
     <form>
-      <v-text-field outlined v-model="name" :error-messages="nameErrors" label="Name" required></v-text-field>
+      <v-text-field
+        outlined
+        v-model="name"
+        :error-messages="nameErrors"
+        label="Name"
+        required
+      ></v-text-field>
       <v-text-field
         outlined
         v-model="mobile"

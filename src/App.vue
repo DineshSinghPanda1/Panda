@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!-- <Marksheet /> -->
     <Syllabus />
   </v-app>
 </template>
@@ -18,22 +19,24 @@ import Vue from "vue";
 import Syllabus from "./components/Teacher/Syllabus.vue";
 //import Application from "./components/Teacher/Application.vue";
 //import Recommend from "./components/Teacher/Recommend.vue";
+//import Test from "./components/Parent/Test.vue";
 
 export default Vue.extend({
   name: "App",
 
   components: {
     //Cards
-    //Marks
-    //Marksheet
     //Mesh
+    //Marksheet
+    // Mesh
     //Marksheet,
-    //TCReq
-    // Appointment
+    // TCReq
+    //Appointment
     //Application
     //Navbar
     //Recommend
     Syllabus
+    // Test
   },
 
   data: () => ({

@@ -1,12 +1,7 @@
 <template>
-  <v-container
-    ><v-row justify="center">
-      <v-dialog
-        v-model="dialog"
-        fullscreen
-        hide-overlay
-        transition="dialog-bottom-transition"
-      >
+  <v-container>
+    <v-row justify="center">
+      <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
         <template v-slot:activator="{ on }">
           <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
         </template>
@@ -42,14 +37,11 @@
                       persistent-hint
                       :prepend-icon="calender"
                       readonly
+                      outlined
                       v-on="on"
                     ></v-text-field>
                   </template>
-                  <v-date-picker
-                    v-model="date"
-                    no-title
-                    @input="menu2 = false"
-                  ></v-date-picker>
+                  <v-date-picker v-model="date" no-title @input="menu2 = false"></v-date-picker>
                 </v-menu>
               </v-col>
 
@@ -62,20 +54,14 @@
 
             <!-----form---->
             <v-form class="ma-5">
-              <v-textarea
-                label="Description"
-                placeholder=" Write here"
-                required
-              ></v-textarea>
+              <v-textarea label="Description" placeholder=" Write here" required outlined></v-textarea>
               <v-checkbox
                 v-model="checkbox"
                 :rules="[v => !!v || 'You must agree to continue!']"
                 label="Accept term & condition"
                 required
               ></v-checkbox>
-              <v-btn color="error" class="mr-4" @click="reset"
-                >Apply For TC</v-btn
-              >
+              <v-btn color="error" class="mr-4" @click="reset">Apply For TC</v-btn>
             </v-form>
 
             <!------------------------>
@@ -87,9 +73,11 @@
                   <v-list-item>
                     <v-list-item-avatar color="grey"></v-list-item-avatar>
                     <v-list-item-content>
-                      <v-list-item-title class="headline">{{
+                      <v-list-item-title class="headline">
+                        {{
                         dii.name
-                      }}</v-list-item-title>
+                        }}
+                      </v-list-item-title>
                     </v-list-item-content>
                   </v-list-item>
                 </v-card>
@@ -100,8 +88,8 @@
           <!----end main---->
         </v-card>
       </v-dialog>
-    </v-row></v-container
-  >
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">

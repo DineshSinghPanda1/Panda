@@ -7,9 +7,11 @@
         <v-row>
           <v-col v-for="person in sample1" :key="person.name">
             <v-card>
-              <v-card-text class="grey text-center">{{
+              <v-card-text class="grey text-center">
+                {{
                 person.title
-              }}</v-card-text>
+                }}
+              </v-card-text>
 
               <v-simple-table height="300px">
                 <template v-slot:default>
@@ -59,9 +61,11 @@
         <v-row>
           <v-col v-for="per in sample2" :key="per.name">
             <v-card>
-              <v-card-text class="grey text-center">{{
+              <v-card-text class="grey text-center">
+                {{
                 per.title
-              }}</v-card-text>
+                }}
+              </v-card-text>
               <v-simple-table height="300px">
                 <template v-slot:default>
                   <thead>

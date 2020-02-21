@@ -1,12 +1,7 @@
 <template>
-  <v-container
-    ><v-row justify="center">
-      <v-dialog
-        v-model="dialog"
-        fullscreen
-        hide-overlay
-        transition="dialog-bottom-transition"
-      >
+  <v-container>
+    <v-row justify="center">
+      <v-dialog v-model="dialog" fullscreen hide-overlay transition="dialog-bottom-transition">
         <template v-slot:activator="{ on }">
           <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
         </template>
@@ -38,18 +33,14 @@
                     <v-text-field
                       v-model="computedDateFormatted"
                       label="Date To"
-                      hint="MM/DD/YYYY"
                       persistent-hint
                       :prepend-icon="calender"
                       readonly
+                      outlined
                       v-on="on"
                     ></v-text-field>
                   </template>
-                  <v-date-picker
-                    v-model="date"
-                    no-title
-                    @input="menu2 = false"
-                  ></v-date-picker>
+                  <v-date-picker v-model="date" no-title @input="menu2 = false"></v-date-picker>
                 </v-menu>
               </v-col>
               <!----------------------2 ------------------------------------------->
@@ -66,26 +57,22 @@
                     <v-text-field
                       v-model="computedDateFormatted"
                       label="Date To"
-                      hint="MM/DD/YYYY"
                       persistent-hint
                       :prepend-icon="calender"
                       readonly
+                      outlined
                       v-on="on"
                     ></v-text-field>
                   </template>
-                  <v-date-picker
-                    v-model="date"
-                    no-title
-                    @input="menu2 = false"
-                  ></v-date-picker>
+                  <v-date-picker v-model="date" no-title @input="menu2 = false"></v-date-picker>
                 </v-menu>
               </v-col>
             </v-row>
             <!-----------------------------2 end---------------------->
             <!-----form----------------------------------------------->
             <v-form>
-              <v-text-field label="Subject" required></v-text-field>
-              <v-textarea label="Write Reasion" required></v-textarea>
+              <v-text-field label="Subject" required outlined></v-text-field>
+              <v-textarea label="Write Reasion" required outlined></v-textarea>
 
               <v-btn color="error" class="mr-4" @click="reset">Submit</v-btn>
             </v-form>
@@ -93,8 +80,8 @@
           <!-------------------------end main---------------------------->
         </v-card>
       </v-dialog>
-    </v-row></v-container
-  >
+    </v-row>
+  </v-container>
 </template>
 
 <script lang="ts">

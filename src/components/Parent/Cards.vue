@@ -11,15 +11,17 @@
         <v-flex md3 v-for="card in cards" :key="card">
           <v-hover v-slot:default="{ hover }" open-delay="200">
             <v-card :elevation="hover ? 16 : 2">
-              <v-card-title class="purple--text justify-center">{{
+              <v-card-title class="purple--text justify-center">
+                {{
                 card.title
-              }}</v-card-title>
+                }}
+              </v-card-title>
               <v-divider></v-divider>
               <v-row>
                 <v-col pl-5>
                   <v-responsive>
                     <v-avatar class="pl-4" size="100">
-                      <!-- <v-img :src="card"></v-img> -->
+                      <v-img :src="card"></v-img>
                     </v-avatar>
                   </v-responsive>
                 </v-col>
@@ -50,15 +52,17 @@
       <v-layout>
         <v-flex md3 v-for="card in cards" :key="card">
           <v-card>
-            <v-card-title class="purple--text justify-center">{{
+            <v-card-title class="purple--text justify-center">
+              {{
               card.title
-            }}</v-card-title>
+              }}
+            </v-card-title>
             <v-divider></v-divider>
             <v-row>
               <v-col>
                 <v-responsive>
                   <v-avatar class="pl-4" size="100">
-                    <!-- <v-img :src="card"></v-img> -->
+                    <v-img :src="card"></v-img>
                   </v-avatar>
                 </v-responsive>
               </v-col>
@@ -93,7 +97,7 @@ export default Vue.extend({
     cards: [
       {
         title: "Section A",
-        // src: require("../assets/logo.png"),
+        src: "https://cdn.vuetifyjs.com/images/john.png",
         name: "Raj",
         subject: "Math",
         strenght: "Strenght of class",
@@ -102,7 +106,7 @@ export default Vue.extend({
       },
       {
         title: "Section B",
-        // src: require("../assets/logo.png"),
+        src: "https://cdn.vuetifyjs.com/images/john.png",
         name: "Dinesh",
         subject: "English",
         strenght: "Strenght of class",
@@ -111,7 +115,7 @@ export default Vue.extend({
       },
       {
         title: "Section C",
-        // src: require("../assets/logo.png"),
+        src: "https://cdn.vuetifyjs.com/images/john.png",
         name: "Kamal",
         subject: "C++",
         strenght: "Strenght of class",
@@ -120,7 +124,7 @@ export default Vue.extend({
       },
       {
         title: "Section D",
-        // src: require("../assets/logo.png"),
+        src: "https://cdn.vuetifyjs.com/images/john.png",
         name: "Suraj",
         subject: "English",
         strenght: "Strenght of class",
